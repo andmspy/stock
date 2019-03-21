@@ -48,10 +48,10 @@ class database_import:
             os._exit(0)
         with open('.\SQL\csv_to_sqlite.sql', 'w+') as f:
             f.write(
-                '.open C:\\\\Users\\\\Administrator\\\\Desktop\\\\eCom\\\\easyship_view\\\\history_data\\\\2019\\\\2019.db\n')
+                '.open C:\\\\Users\\\\Administrator\\\\Desktop\\\\eCom\\\\easyship_view\\\\stock\\\\history_data\\\\2019\\\\2019.db\n')
             f.write('.separator \',\'\n')
             f.write(
-                '.import C:\\\\Users\\\\Administrator\\\\Desktop\\\\eCom\\\\easyship_view\\\\history_data\\\\2019\\\\excel\\\\%s.csv %s' % (self.name, self.name))
+                '.import C:\\\\Users\\\\Administrator\\\\Desktop\\\\eCom\\\\easyship_view\\\\stock\\\\history_data\\\\2019\\\\excel\\\\%s.csv %s' % (self.name, self.name))
             f.close()
             os.system('sqlite3 contact.db<.\SQL\csv_to_sqlite.sql')
             print('done')
