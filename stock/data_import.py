@@ -59,7 +59,7 @@ class database_import:
     # 下载当天数据
     def get_today_data(self):
         today = ts.get_today_all()
-        today.to_csv(r'.\history_data\2019\excel\%s.csv' % self.name, index=False, encoding='utf_8_sig')
+        today.to_excel(r'.\history_data\2019\excel\%s.xls' % self.name, index=False, encoding='utf_8_sig')
 
 
     def main(self):
